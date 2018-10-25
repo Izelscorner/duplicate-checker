@@ -13,8 +13,7 @@ function duplicateChecker (n = (1000 * 1000)) {
   for (let i = 0; i <= arrSize; i++) {
     arr[i] = Math.floor(Math.random() * (max - min + 1)) + min // Generates random values between min - max
   }
-  
-  // For comparison and display purposes log original array
+  // For comparison and display purposes log original array and length.
   console.log(`Array length: ${arr.length}\nRandomly generated array: ${arr}`)
 
   // Testing for duplicates
@@ -32,7 +31,7 @@ function duplicateChecker (n = (1000 * 1000)) {
   }
 }
 
-// Node Command line integration get command line arguments.
+// Node Command line integration to get command line arguments.
 
 var args = process.argv.slice(2)
 var arg
@@ -41,6 +40,7 @@ args.forEach(function (val, index, array) {
     arg = parseInt(val)
   }
 })
+
 console.log('duplicate checker is runnig.')
 
 duplicateChecker(arg)
