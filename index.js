@@ -13,7 +13,6 @@ function duplicateChecker (n = (1000 * 1000)) {
   for (let i = 0; i <= arrSize; i++) {
     arr[i] = Math.floor(Math.random() * (max - min + 1)) + min // Generates random values between min - max
   }
-  
   // Testing for duplicates
   let counts = new Int32Array(arrSize)
 
@@ -29,7 +28,7 @@ function duplicateChecker (n = (1000 * 1000)) {
   }
 }
 
-// Node Command line integration get commands line arguments.
+// Node Command line integration get command line arguments.
 
 var args = process.argv.slice(2)
 var arg
