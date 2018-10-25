@@ -17,9 +17,10 @@ function duplicateChecker (n = (1000 * 1000)) {
   console.log(`Array length: ${arr.length}\nRandomly generated array: ${arr}`)
 
   // Testing for duplicates
-  let counts = new Int32Array(arrSize)
+  let counts = new Int32Array(arrSize) // Note: JS Object can be used as well 'let counts = {}', I picked array because values are integer.
 
   for (let i = 0; i < arrSize; i++) {
+    // Lookup time/access time is O(1)
     if (counts[arr[i]] === undefined) {
       counts[arr[i]] = 1
     } else {
