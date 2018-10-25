@@ -10,7 +10,7 @@ $ git clone git@github.com:izelaciman/duplicate-checker.git
 $ cd duplicate-checker
 ```
 ```
-$ node index.js #paramer 
+$ node index.js #parameter 
 
 (Examples)
 node index.js 
