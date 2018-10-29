@@ -10,12 +10,20 @@ $ git clone git@github.com:izelaciman/duplicate-checker.git
 $ cd duplicate-checker
 ```
 ```
-$ node index.js #parameter 
+$ npm install
+```
 
-(Examples)
-node index.js 
-node index.js 10
-node index.js 100
+```
+$ npm start (With Default Value)
+
+(Examples with parameters)
+npm start 10 
+npm start 20
+npm start 100
+```
+
+```
+$ npm test
 ```
 
 ## Some Assumptions

@@ -1,0 +1,25 @@
+{
+  "name": "duplicate-checker",
+  "version": "1.0.0",
+  "description": "A duplicate checker function for arrays",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izelaciman/duplicate-checker.git"
+  },
+  "author": "Izel Aciman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izelaciman/duplicate-checker/issues"
+  },
+  "homepage": "https://github.com/izelaciman/duplicate-checker#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
