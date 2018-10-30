@@ -10,7 +10,7 @@ args.forEach(function (val, index, array) {
   }
 })
 
-//Create an instance with parameter
+// Create an instance with parameter
 var checker = new DuplicateChecker(arg)
 console.log('Generation Random Array')
 console.log('Random Array:', checker.generateRandomArray())
