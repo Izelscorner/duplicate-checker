@@ -26,13 +26,12 @@ describe('DuplicateChecker', function () {
     it('default n value should be 1M', function () {
       const randomArray = instance.generateRandomArray()
       expect(randomArray.length - 1).to.equal(1000 * 1000)
-    })   
+    })
   })
 
   describe('findDuplicates()', function () {
     it('return correct result', function () {
       const arr = [6, 6, 4, 3, 3, 1]
-      const n = arr.length - 1
       const duplicates = instance.findDuplicates(arr)
       expect(duplicates).to.deep.equal([3, 6])
     })
@@ -47,7 +46,7 @@ describe('DuplicateChecker', function () {
       const arr = [2, 3, 3, 2]
       const duplicates = instance.findDuplicates(arr, false)
       expect(duplicates).to.deep.equal([3, 2])
-    })    
+    })
 
     it('avoid priniting duplicates multiple time', function () {
       const arr = [1, 1, 1, 4, 5, 6, 7, 5] // 1 should be displayed only once
