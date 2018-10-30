@@ -43,6 +43,12 @@ describe('DuplicateChecker', function () {
       expect(duplicates).to.deep.equal([2, 3])
     })
 
+    it('return expected result as in given order', function () {
+      const arr = [2, 3, 3, 2]
+      const duplicates = instance.findDuplicates(arr, false)
+      expect(duplicates).to.deep.equal([3, 2])
+    })    
+
     it('avoid priniting duplicates multiple time', function () {
       const arr = [1, 1, 1, 4, 5, 6, 7, 5] // 1 should be displayed only once
       const duplicates = instance.findDuplicates(arr)
