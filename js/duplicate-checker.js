@@ -4,22 +4,23 @@
 // For linting I used standartd JS , this is why there won't be trailing semi columns at the end of lines.
 // Default value for N is 1,000,000.
 class DuplicateChecker {
-  constructor (n = (1000 * 1000)) {
-    this.min = 1
-    this.max = n
-    this.arrSize = n + 1
+  constructor(){
+      console.log('Duplicate Checker instance created.')
   }
   // Generate a random array
-  generateRandomArray () {
-    let arr = new Int32Array(this.arrSize)
-    for (let i = 0; i <= this.arrSize; i++) {
-      arr[i] = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min // Generates random values between min - max
+  generateRandomArray (n = (1000 * 1000)) {
+    const min = 1
+    const max = n
+    const arrSize = n + 1      
+    let arr = new Int32Array(arrSize)
+    for (let i = 0; i <= arrSize; i++) {
+      arr[i] = Math.floor(Math.random() * (max - min + 1)) + min // Generates random values between min - max
     }
     return arr
   }
   // Finding duplicates in an array
   findDuplicates (arr) {
-    let counts = new Int32Array(arr.length) // Note: JS Object can be used as well 'let counts = {}', I picked array because values are integer.
+    let counts = new Int32Array(arr.length+1) // Note: JS Object can be used as well 'let counts = {}', I picked array because values are integer.
     let duplicates = []
     for (let i = 0; i < arr.length; i++) {
       // Lookup time/access time is O(1)

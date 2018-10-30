@@ -31,6 +31,7 @@ $ npm test
 - Filled the array with random numbers between 1 - n
 - Used ES6 Typed arrays
 - Given default size of the array is 1 million performance of this function is important, it performs on O(n) time compexity and O(n) Auxiliary Space, with little bit of more work Auxiliary space can be even better then this.
+- I made assumption that duplicate result should be in ascending instead of the random order, this adds to performance 
 
 
 ## Credits
