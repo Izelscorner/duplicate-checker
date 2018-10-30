@@ -8,17 +8,17 @@ class DuplicateChecker {
     this.min = 1
     this.max = n
     this.arrSize = n + 1
-    this.arr = new Int32Array(this.arrSize)
   }
   // Generate a random array
-  generateRandomArray (arrSize = this.arrSize, min = this.min, max = this.max) {
-    for (let i = 0; i <= arrSize; i++) {
-      this.arr[i] = Math.floor(Math.random() * (max - min + 1)) + min // Generates random values between min - max
+  generateRandomArray () {
+    let arr = new Int32Array(this.arrSize)
+    for (let i = 0; i <= this.arrSize; i++) {
+      arr[i] = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min // Generates random values between min - max
     }
-    return this.arr
+    return arr
   }
   // Finding duplicates in an array
-  findDuplicates (arr = this.arr) {
+  findDuplicates (arr) {
     let counts = new Int32Array(arr.length) // Note: JS Object can be used as well 'let counts = {}', I picked array because values are integer.
     let duplicates = []
     for (let i = 0; i < arr.length; i++) {

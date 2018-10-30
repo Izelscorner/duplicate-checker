@@ -12,7 +12,7 @@ describe('DuplicateChecker', function () {
       expect(randomArray).to.have.length(n + 1)
     })
 
-    it('Values should be between 1 to n', function () {
+    it('values should be between 1 to n', function () {
       const n = 1000
       const instance = new DuplicateChecker(n)
       const randomArray = instance.generateRandomArray()
@@ -42,21 +42,21 @@ describe('DuplicateChecker', function () {
   })
 
   describe('full flow', function () {
-    it('There should be one duplicate if n = 1', function () {
+    it('there should be one duplicate if n = 1', function () {
       const n = 1
       const instance = new DuplicateChecker(n)
-      instance.generateRandomArray()
-      const duplicates = instance.findDuplicates()
+      const randomArray = instance.generateRandomArray()
+      const duplicates = instance.findDuplicates(randomArray)
       expect(duplicates.length).to.equal(1)
     })
 
-    it('Performance test for 10M million records', function () {
+    it('performance test for 10M records', function () {
       // For performance check
       this.timeout(15000)
       const n = 1000 * 1000 * 10
       const instance = new DuplicateChecker(n)
-      instance.generateRandomArray()
-      const duplicates = instance.findDuplicates()
+      const randomArray = instance.generateRandomArray()
+      const duplicates = instance.findDuplicates(randomArray)
       expect(duplicates.length).to.greaterThan(0)
     })
   })
