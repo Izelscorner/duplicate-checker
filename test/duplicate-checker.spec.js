@@ -22,6 +22,11 @@ describe('DuplicateChecker', function () {
         })
       })
     })
+
+    it('default n value should be 1M', function () {
+      const randomArray = instance.generateRandomArray()
+      expect(randomArray.length - 1).to.equal(1000 * 1000)
+    })   
   })
 
   describe('findDuplicates()', function () {
@@ -53,12 +58,21 @@ describe('DuplicateChecker', function () {
       expect(duplicates.length).to.equal(1)
     })
 
-    it('performance test for 10M records', function () {
+    it('performance test with sorting for 10M records', function () {
       // For performance check
       this.timeout(15000)
       const n = 1000 * 1000 * 10
       const randomArray = instance.generateRandomArray(n)
       const duplicates = instance.findDuplicates(randomArray)
+      expect(duplicates.length).to.greaterThan(0)
+    })
+
+    it('performance test without sorting for 10M records', function () {
+      // For performance check
+      this.timeout(15000)
+      const n = 1000 * 1000 * 10
+      const randomArray = instance.generateRandomArray(n)
+      const duplicates = instance.findDuplicates(randomArray, false)
       expect(duplicates.length).to.greaterThan(0)
     })
   })

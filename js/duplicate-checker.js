@@ -19,7 +19,7 @@ class DuplicateChecker {
     return arr
   }
   // Finding duplicates in an array
-  findDuplicates (arr) {
+  findDuplicates (arr, sorted = true) {
     let counts = new Int32Array(arr.length+1) // Note: JS Object can be used as well 'let counts = {}', I picked array because values are integer.
     let duplicates = []
     for (let i = 0; i < arr.length; i++) {
@@ -33,7 +33,13 @@ class DuplicateChecker {
         if (counts[arr[i]] === 2) duplicates.push(arr[i]) // This means for the first time we are running into duplicate for this value.
       }
     }
-    return duplicates.sort((a, b) => a - b)
+
+    if(sorted) {
+        return duplicates.sort((a, b) => a - b) //Ascending sorting duplicate array
+    } else {
+        return duplicates
+    }
+
   }
 }
 
