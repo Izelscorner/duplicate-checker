@@ -12,7 +12,7 @@ args.forEach(function (val, index, array) {
 
 // Create an instance with parameter
 var checker = new DuplicateChecker(arg)
-console.log('Generation Random Array')
+console.log('Generating Random Array')
 console.log('Random Array:', checker.generateRandomArray())
-console.log('duplicate checker is runnig.')
+console.log('Finding Duplicates')
 console.log('Duplicates:', checker.findDuplicates())
